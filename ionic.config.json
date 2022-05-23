@@ -1,0 +1,7 @@
+{
+  "name": "identum",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

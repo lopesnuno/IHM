@@ -28,7 +28,7 @@ os ficheiros em que estamos a trabalhar. **Dentro da pasta** que criaste
 para o projeto fazes...
 
 ```bash
-$ git clone https://github.com/lopesnuno/identum.git
+$ git clone git@github.com:lopesnuno/IHM.git
 ```
 
 

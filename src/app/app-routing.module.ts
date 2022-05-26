@@ -9,7 +9,11 @@ const routes: Routes = [
   {
     path: 'homepage',
     loadChildren: () => import('./homepage/homepage.module').then( m => m.HomepagePageModule)
-  }     //TODO: add routes to favorites, cart, profile/login
+  },   {
+    path: 'roupa',
+    loadChildren: () => import('./roupa/roupa.module').then( m => m.RoupaPageModule)
+  }
+    //TODO: add routes to favorites, cart, profile/login
 ];
 @NgModule({
   imports: [

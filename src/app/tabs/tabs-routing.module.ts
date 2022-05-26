@@ -11,6 +11,10 @@ const routes: Routes = [
         path: 'homepage',
         loadChildren: () => import('../homepage/homepage.module').then(m => m.HomepagePageModule)
       },
+      {
+        path: 'favourits',
+        loadChildren: () => import('../favourits/favourits.module').then(m => m.FavouritsPageModule)
+      },
       {       //TODO: add routes to favorites, cart, profile/login
         path: '',
         redirectTo: 'tabs/homepage',

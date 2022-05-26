@@ -12,7 +12,11 @@ const routes: Routes = [
   },   {
     path: 'roupa',
     loadChildren: () => import('./roupa/roupa.module').then( m => m.RoupaPageModule)
+  },  {
+    path: 'favourits',
+    loadChildren: () => import('./favourits/favourits.module').then( m => m.FavouritsPageModule)
   }
+
     //TODO: add routes to favorites, cart, profile/login
 ];
 @NgModule({

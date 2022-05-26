@@ -1,0 +1,26 @@
+.page-header h1{
+  margin-top: 10px;
+}
+
+.search {
+  ion-item {
+    border-radius: 10px;
+    box-shadow: 0 13px 30px 0 rgba(0, 0, 0, 0.09);
+    padding: 8px;
+
+     ion-icon {
+       margin-right: 16px;
+     }
+
+    ion-input {
+       padding-left: 10px !important;
+       border-left: 1px solid #f4f4f4;
+    }
+  }
+}
+
+.button {
+  margin-top: 15px;
+  width: 300px;
+  height: 100px;
+}

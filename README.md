@@ -70,5 +70,6 @@ escolhes outra tarefa e é mais do mesmo.
 
 ```bash
 $ git checkout main
+$ git pull
 $ git checkout -b 'nome da tarefa'
 ```

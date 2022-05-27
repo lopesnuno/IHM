@@ -8,6 +8,7 @@
 </ion-header>
 
 <ion-content>
+
   <ion-card *ngIf="tshirtInfo">
     <img src="./assets/img/{{ tshirtInfo.img }}" />
     <ion-card-header>
@@ -16,10 +17,22 @@
     </ion-card-header>
     <ion-card-content>
       <ion-item-divider>
-        <ion-icon color="success" name="cash-outline" slot="start"></ion-icon>
-        <ion-badge color="success" slot="end">Price: {{ tshirtInfo.price }}</ion-badge>
+        <ion-icon color="dark" name="cash-outline" slot="start"></ion-icon>
+        <ion-icon color="danger" name="heart-outline" slot="start" class="left" (click)="presentToast()"></ion-icon>
+        <ion-badge color="dark" slot="end">Price: {{ tshirtInfo.price }}</ion-badge>
       </ion-item-divider>
     </ion-card-content>
   </ion-card>
 
+  
+      <ion-button size="small" color="dark" class="btn1">
+        Verificar stock
+      </ion-button>
+  
+      <ion-button size="small" color="dark" class="btn">
+        Selecionar tamanho
+      </ion-button>
+    
 </ion-content>
+
+<!--TODO: Card modal to size chart and stock -->

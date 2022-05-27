@@ -13,15 +13,11 @@ const routes: Routes = [
       },
       {
         path: 'roupa',
-        loadChildren: () => import('../roupa/roupa.module').then(m => m.RoupaPageModule)
+        loadChildren: () => import('../homepage/roupa/roupa.module').then(m => m.RoupaPageModule)
       },
       {
-        path: 'roupa-tshirt',
-        loadChildren: () => import('../roupa-tshirt/roupa-tshirt.module').then(m => m.RoupaTshirtPageModule)
-      },
-      {
-        path: 'roupainfo',
-        loadChildren: () => import('../roupainfo/roupainfo.module').then(m => m.RoupainfoPageModule)
+        path: 'tshirt',
+        loadChildren: () => import('../homepage/roupa/tshirt/tshirt.module').then(m => m.TshirtPageModule)
       },
       {       //TODO: add routes to favorites, cart, profile/login
         path: '',

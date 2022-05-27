@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RoupaTshirtPageRoutingModule } from './roupa-tshirt-routing.module';
+import { TshirtPageRoutingModule } from './tshirt-routing.module';
 
-import { RoupaTshirtPage } from './roupa-tshirt.page';
+import { TshirtPage } from './tshirt.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RoupaTshirtPageRoutingModule
+    TshirtPageRoutingModule
   ],
-  declarations: [RoupaTshirtPage]
+  declarations: [TshirtPage]
 })
-export class RoupaTshirtPageModule {}
+export class TshirtPageModule {}

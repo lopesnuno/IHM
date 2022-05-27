@@ -8,6 +8,10 @@ const routes: Routes = [
     path: '',
     component: HomepagePage
   },
+  {
+    path: 'roupa',
+    loadChildren: () => import('./roupa/roupa.module').then( m => m.RoupaPageModule)
+  },
 ];
 
 @NgModule({

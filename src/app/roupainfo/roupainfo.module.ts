@@ -18,3 +18,6 @@ import { RoupainfoPage } from './roupainfo.page';
   declarations: [RoupainfoPage]
 })
 export class RoupainfoPageModule {}
+
+//TODO: Size chart, items availabilty add to cart
+

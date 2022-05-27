@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { Router, NavigationExtras } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-roupa-tshirt',
-  templateUrl: './roupa-tshirt.page.html',
-  styleUrls: ['./roupa-tshirt.page.scss'],
+  selector: 'app-tshirt',
+  templateUrl: './tshirt.page.html',
+  styleUrls: ['./tshirt.page.scss'],
 })
-export class RoupaTshirtPage {
+
+export class TshirtPage {
 
   private dataTshirts: any;
 
@@ -14,14 +15,14 @@ export class RoupaTshirtPage {
     this.dataTshirts = {
       "tshirt-xpto": {
         "id": "1",
-        "title": "Tshirt XPTO",
+        "title": "T-shirt XPTO",
         "price": "35$",
         "desc":"100% Algodão",
         "img":"tshirt-xpto.jpeg"
       },
       "tshirt-pxto": {
         "id": "2",
-        "title": "Tshirt PXTO",
+        "title": "T-shirt PXTO",
         "price": "99$",
         "desc":"50% polyester 50% Algodão",
         "img":"tshirt-pxto.webp"
@@ -40,3 +41,4 @@ export class RoupaTshirtPage {
   }
 
 }
+

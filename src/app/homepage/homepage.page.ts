@@ -13,5 +13,3 @@ export class HomepagePage implements OnInit {
   }
 
 }
-
-//TODO: Make it all over again, but this time generate pages under "hompage/(something)", in oder to keep the tabs tab underneat;

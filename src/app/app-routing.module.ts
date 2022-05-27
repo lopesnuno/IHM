@@ -9,14 +9,14 @@ const routes: Routes = [
   {
     path: 'homepage',
     loadChildren: () => import('./homepage/homepage.module').then( m => m.HomepagePageModule)
-  },  
-  {
-    path: 'roupa',
-    loadChildren: () => import('./roupa/roupa.module').then( m => m.RoupaPageModule)
   },
   {
-    path: 'roupa-tshirt',
-    loadChildren: () => import('./roupa-tshirt/roupa-tshirt.module').then( m => m.RoupaTshirtPageModule)
+    path: 'roupa',
+    loadChildren: () => import('./homepage/roupa/roupa.module').then( m => m.RoupaPageModule)
+  },
+  {
+    path: 'tshirt',
+    loadChildren: () => import('./homepage/roupa/tshirt/tshirt.module').then( m => m.TshirtPageModule)
   },
   {
     path: 'roupainfo',

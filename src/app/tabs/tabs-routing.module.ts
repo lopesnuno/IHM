@@ -19,6 +19,10 @@ const routes: Routes = [
         path: 'tshirt',
         loadChildren: () => import('../homepage/roupa/tshirt/tshirt.module').then(m => m.TshirtPageModule)
       },
+      {
+        path: 'profile',
+        loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule)
+      },
       {       //TODO: add routes to favorites, cart, profile/login
         path: '',
         redirectTo: 'tabs/homepage',

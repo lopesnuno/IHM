@@ -19,7 +19,7 @@ export class RoupainfoPage {
     })
    }
    
-   async presentToast() {
+  public async presentToast() {
     const toast = await this.toastController.create({
       message: 'Artigo adicionado aos favoritos.',
       duration: 2000,

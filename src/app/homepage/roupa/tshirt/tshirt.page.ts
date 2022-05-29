@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
+import { ActionSheetController, IonRouterOutlet, ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tshirt',
@@ -11,7 +12,7 @@ export class TshirtPage {
 
   private dataTshirts: any;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, public routerOutlet: IonRouterOutlet, public actionSheetCtrl: ActionSheetController, public modalController: ModalController) {
     this.dataTshirts = {
       "tshirt-xpto": {
         "id": "1",
@@ -38,6 +39,13 @@ export class TshirtPage {
       }
     }
     this.router.navigate(['roupainfo'], infoDaTshirt);
+  }
+
+  async showModal() {
+    const modal = await this.modalController.create({
+      component: 'nigger'
+    })
+    await modal.present();
   }
 
 }

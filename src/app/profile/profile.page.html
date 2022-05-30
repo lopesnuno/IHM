@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center">
+  
+  <div class="page-header">
+    <h1>
+      IDENTUM
+    </h1>
+  </div>
+
+  <div class="form">
+    <form [formGroup]="loginForm" (ngSubmit)="submitForm()" novalidate>
+      <ion-item lines="none">
+        <ion-input type="text" formControlName="email" required placeholder="E-mail"></ion-input>
+      </ion-item>
+      <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+        <span *ngIf="email.errors?.required">Insira email</span>
+        <span *ngIf="email.errors?.pattern">E-mail inválido</span>
+      </div>
+
+      <ion-item lines="none">
+        <ion-input placeholder="Palavra-passe" type="password" formControlName="password" required></ion-input>
+      </ion-item>
+      <div *ngIf="password.dirty && password.errors" class="errors">
+        <span *ngIf="password.errors?.required">Insira password</span>
+        <span *ngIf="password.errors?.minlength">Insira pelo menos 6 caracteres</span>
+      </div>
+      <h6 routerLink="../homepage" routerDirection="forward">Esquece-se da sua palavra-passe ?</h6>
+
+      <ion-button routerLink="./logged" routerDirection="forward" type="submit" color="dark" expand="block" [disabled]="!loginForm.valid">
+        Login
+      </ion-button>
+    </form>
+  </div>
+
+  <div class="no-account">
+    <h2>Ainda não tem conta ?</h2>
+
+    <ion-button routerLink="./create" routerDirection="forward" color="light" expand="block">
+      Criar conta
+    </ion-button>
+  </div>
+</ion-content>

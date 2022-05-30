@@ -1,0 +1,31 @@
+.page-header h1{
+    font-size: 50px;
+    margin-top: 40px;
+  }
+
+.form {
+    margin-top: 10px;
+    ion-item{
+        border-radius: 5px;
+        border-color: rgb(201, 201,201);
+        border-width: 2px;
+        border-style: solid;
+        margin-top: 20px;
+    }
+}
+
+.no-padding {
+    --min-height: 20px;
+    font-size: 10px; 
+}
+
+.errors {
+    font-size: small;
+    color: rgb(255, 255, 255);
+    background: var(--ion-color-danger);
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+}

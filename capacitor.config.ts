@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'pt.identum.app',
   appName: 'identum',
   webDir: 'www',
   bundledWebRuntime: false

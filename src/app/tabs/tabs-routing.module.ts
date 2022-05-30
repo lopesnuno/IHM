@@ -12,6 +12,18 @@ const routes: Routes = [
         loadChildren: () => import('../homepage/homepage.module').then(m => m.HomepagePageModule)
       },
       {
+        path: 'roupa',
+        loadChildren: () => import('../homepage/roupa/roupa.module').then(m => m.RoupaPageModule)
+      },
+      {
+        path: 'tshirt',
+        loadChildren: () => import('../homepage/roupa/tshirt/tshirt.module').then(m => m.TshirtPageModule)
+      },
+      {
+        path: 'profile',
+        loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule)
+      },
+      {
         path: 'favourits',
         loadChildren: () => import('../favourits/favourits.module').then(m => m.FavouritsPageModule)
       },

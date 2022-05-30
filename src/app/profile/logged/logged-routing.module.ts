@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: LoggedPage
+  },  {
+    path: 'info',
+    loadChildren: () => import('./info/info.module').then( m => m.InfoPageModule)
   }
+
 ];
 
 @NgModule({

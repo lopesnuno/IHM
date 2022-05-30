@@ -1,9 +1,37 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>contact</ion-title>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button text="" class="back-button" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar Contacto</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="form ion-padding">
+    <form [formGroup]="editContactForm" (ngSubmit)="submitForm()" novalidate>
+      <ion-item lines="none">
+        <ion-input type="text" formControlName="number" required placeholder="Insira o novo número"></ion-input>
+      </ion-item>
+      <div *ngIf="number.dirty && number.errors" class="errors">
+        <span *ngIf="number.errors?.required">Insira número de telemóvel</span>
+        <span *ngIf="number.errors?.minlength">Insira pelo menos 9 digitos</span>
+        <span *ngIf="number.errors?.maxlength">Apenas 9 digitos</span>
+      </div>
+
+      <ion-item lines="none">
+        <ion-input type="text" formControlName="numberC" required placeholder="Confirme"></ion-input>
+      </ion-item>
+      <div *ngIf="numberC.dirty  && numberC.errors" class="errors">
+        <span *ngIf="numberC.errors?.required">Insira número de telemóvel</span>
+        <span *ngIf="numberC.errors?.minlength">Insira pelo menos 9 digitos</span>
+        <span *ngIf="numberC.errors?.maxlength">Apenas 9 digitos</span>
+      </div>
+
+      <ion-button  expand="block"  shape="round" color="light" routerLink="../" routerDirection="back" [disabled]="!editContactForm.valid" (click)="presentToast()"> 
+        Enviar-me email de confirmaçao
+      </ion-button>
+    </form>
+  </div>
 
 </ion-content>

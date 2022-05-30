@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>{{tshirtInfo.title}}</ion-title>
+    <ion-title>Reserva nº: {{tshirtInfo.reservationId}}</ion-title>
     <ion-buttons slot="start">
       <ion-back-button text="" class="back-button"></ion-back-button>
     </ion-buttons>
@@ -18,21 +18,12 @@
     <ion-card-content>
       <ion-item-divider>
         <ion-icon color="dark" name="cash-outline" slot="start"></ion-icon>
-        <ion-icon color="danger" name="heart-outline" slot="start" class="left" (click)="presentToast()"></ion-icon>
         <ion-badge color="dark" slot="end">Preço: {{ tshirtInfo.price }}</ion-badge>
+      </ion-item-divider>
+      <ion-item-divider>
+        <ion-badge color="dark" slot="end">Loja: {{ tshirtInfo.store }}</ion-badge>
       </ion-item-divider>
     </ion-card-content>
   </ion-card>
-
-  
-      <ion-button size="small" color="dark" class="btn1">
-        Verificar stock
-      </ion-button>
-  
-      <ion-button size="small" color="dark" class="btn">
-        Selecionar tamanho
-      </ion-button>
     
 </ion-content>
-
-<!--TODO: Card modal to size chart and stock -->  

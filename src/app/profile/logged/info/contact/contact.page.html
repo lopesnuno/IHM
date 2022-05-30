@@ -28,9 +28,11 @@
         <span *ngIf="numberC.errors?.maxlength">Apenas 9 digitos</span>
       </div>
 
-      <ion-button  expand="block"  shape="round" color="light" routerLink="../" routerDirection="back" [disabled]="!editContactForm.valid" (click)="presentToast()"> 
-        Enviar-me email de confirmaçao
-      </ion-button>
+      <div class="padding">
+        <ion-button expand="block"  shape="round" color="light" routerLink="../" routerDirection="back" [disabled]="!editContactForm.valid" (click)="presentToast()"> 
+          Enviar-me email de confirmaçao
+        </ion-button>
+      </div>
     </form>
   </div>
 

@@ -46,7 +46,7 @@ export class ContactPage implements OnInit {
 
   public async presentToast() {
     const toast = await this.toastController.create({
-      message: 'Uma mensagem foi enviada para o seu e-mail.',
+      message: 'Foi enviada uma mensagem de confiramção para o seu e-mail.',
       duration: 2000,
       color: 'dark',
       position: 'bottom'

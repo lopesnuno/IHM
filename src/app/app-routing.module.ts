@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   },
+  {
+    path: 'reservationinfo',
+    loadChildren: () => import('./reservationinfo/reservationinfo.module').then( m => m.ReservationinfoPageModule)
+  },
     //TODO: add routes to favorites, cart, profile/login
 ];
 @NgModule({

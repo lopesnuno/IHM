@@ -30,17 +30,17 @@ export class TshirtPage {
       },
       "123": {
         "id": "3",
-        "title": "T-shirt PXTO",
-        "price": "99$",
+        "title": "T-shirt Kenzo",
+        "price": "2500$",
         "desc":"50% polyester 50% Algodão",
-        "img":"123.webp"
+        "img":"123.jpeg"
       },
       "1234": {
         "id": "4",
-        "title": "T-shirt PXTO",
-        "price": "99$",
+        "title": "T-shirt Dior",
+        "price": "1000$",
         "desc":"50% polyester 50% Algodão",
-        "img":"4.webp"
+        "img":"4.jpeg"
       },
     }
    }
@@ -57,7 +57,7 @@ export class TshirtPage {
 
   async showModal() {
     const modal = await this.modalController.create({
-      component: 'nigger'
+      component: ''
     })
     await modal.present();
   }

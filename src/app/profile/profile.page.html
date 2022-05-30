@@ -5,6 +5,7 @@
 </ion-header>
 
 <ion-content class="ion-padding ion-text-center">
+  
   <div class="page-header">
     <h1>
       IDENTUM
@@ -18,7 +19,7 @@
       </ion-item>
       <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
         <span *ngIf="email.errors?.required">Insira email</span>
-        <span *ngIf="email.errors?.email">E-mail inválido</span>
+        <span *ngIf="email.errors?.pattern">E-mail inválido</span>
       </div>
 
       <ion-item lines="none">
@@ -39,7 +40,7 @@
   <div class="no-account">
     <h2>Ainda não tem conta ?</h2>
 
-    <ion-button routerLink="../homepage" routerDirection="forward" color="light" expand="block">
+    <ion-button routerLink="./create" routerDirection="forward" color="light" expand="block">
       Criar conta
     </ion-button>
   </div>

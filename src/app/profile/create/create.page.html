@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Criar conta</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button text="" class="back-button"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="page-header ion-text-center">
+    <h1>
+      IDENTUM
+    </h1>
+  </div>
+
+  <div class="form ion-padding">
+    <form [formGroup]="createForm" (ngSubmit)="submitForm()" novalidate>
+      <ion-item lines="none">
+        <ion-input placeholder="Nome" type="text" formControlName="name" required></ion-input>
+      </ion-item>
+      <div *ngIf="name.dirty && name.errors" class="errors">
+        <span *ngIf="name.errors?.required">Insira nome</span>
+        <span *ngIf="name.errors?.minlength">Insira pelo menos 2 caracteres</span>
+      </div>
+
+      <ion-item lines="none">
+        <ion-input placeholder="Apelido" type="text" formControlName="surname" required></ion-input>
+      </ion-item>
+      <div *ngIf="surname.dirty && surname.errors" class="errors">
+        <span *ngIf="surname.errors?.required">Insira apelido</span>
+        <span *ngIf="surname.errors?.minlength">Insira pelo menos 2 caracteres</span>
+      </div>
+      
+      <ion-item lines="none">
+        <ion-input type="text" formControlName="email" required placeholder="E-mail"></ion-input>
+      </ion-item>
+      <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+        <span *ngIf="email.errors?.required">Insira email</span>
+        <span *ngIf="email.errors?.pattern">E-mail inválido</span>
+      </div>
+
+      <ion-item lines="none">
+        <ion-input placeholder="Palavra-passe" type="password" formControlName="password" required></ion-input>
+      </ion-item>
+      <div *ngIf="password.dirty && password.errors" class="errors">
+        <span *ngIf="password.errors?.required">Insira palavra-passe</span>
+        <span *ngIf="password.errors?.minlength">Insira pelo menos 6 caracteres</span>
+      </div>
+
+      <ion-item lines="none">
+        <ion-input placeholder="Telemóvel" type="numeric" formControlName="cellphone" required></ion-input>
+      </ion-item>
+      <div *ngIf="cellphone.dirty && cellphone.errors" class="errors">
+        <span *ngIf="cellphone.errors?.required">Insira número de telemovel</span>
+        <span *ngIf="cellphone.errors?.minlength">Insira pelo menos 9 digitos</span>
+        <span *ngIf="cellphone.errors?.maxlength">Apenas 9 digitos</span>
+      </div>
+    </form>
+  </div>
+
+  <div class="ion-text-center">
+    <ion-item lines="none">
+      <ion-label>Quer receber novidades da Identum através do e-mail?</ion-label>
+      <ion-toggle slot="end" name="Quer receber novidades da Identum através do e-mail?" color='dark' unchecked></ion-toggle>
+    </ion-item>
+  </div>
+
+  <div class="ion-padding ion-text-center">
+    <ion-button routerLink="../logged" routerDirection="forward" color="light" expand="block">
+      Criar conta
+    </ion-button>
+  </div>
+
+</ion-content>

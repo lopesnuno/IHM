@@ -28,6 +28,20 @@ export class TshirtPage {
         "desc":"50% polyester 50% Algodão",
         "img":"tshirt-pxto.webp"
       },
+      "123": {
+        "id": "2",
+        "title": "T-shirt PXTO",
+        "price": "99$",
+        "desc":"50% polyester 50% Algodão",
+        "img":"123.webp"
+      },
+      "1234": {
+        "id": "2",
+        "title": "T-shirt PXTO",
+        "price": "99$",
+        "desc":"50% polyester 50% Algodão",
+        "img":"4.webp"
+      },
     }
    }
 

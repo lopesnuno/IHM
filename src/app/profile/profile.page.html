@@ -30,7 +30,7 @@
       </div>
       <h6 routerLink="../homepage" routerDirection="forward">Esquece-se da sua palavra-passe ?</h6>
 
-      <ion-button type="submit" color="dark" expand="block" [disabled]="!loginForm.valid">
+      <ion-button routerLink="./logged" routerDirection="forward" type="submit" color="dark" expand="block" [disabled]="!loginForm.valid">
         Login
       </ion-button>
     </form>

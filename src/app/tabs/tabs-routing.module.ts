@@ -23,6 +23,10 @@ const routes: Routes = [
         path: 'profile',
         loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule)
       },
+      {
+        path: 'favourits',
+        loadChildren: () => import('../favourits/favourits.module').then(m => m.FavouritsPageModule)
+      },
       {       //TODO: add routes to favorites, cart, profile/login
         path: '',
         redirectTo: 'tabs/homepage',

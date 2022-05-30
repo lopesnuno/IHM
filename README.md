@@ -11,5 +11,5 @@ Instalçao de dependências.
 
 ```bash
 $ npm install
-$ npm install
+$ yarn install
 ```

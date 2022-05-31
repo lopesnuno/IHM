@@ -15,24 +15,44 @@
       <ion-card-subtitle>{{ tshirtInfo.desc }}</ion-card-subtitle>
       <ion-card-title>{{ tshirtInfo.title }}</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content style="height: 110%;">
       <ion-item-divider>
         <ion-icon color="dark" name="cash-outline" slot="start"></ion-icon>
         <ion-icon color="danger" name="heart-outline" slot="start" class="left" (click)="presentToast()"></ion-icon>
-        <ion-badge color="dark" slot="end">Price: {{ tshirtInfo.price }}</ion-badge>
+        <ion-badge color="dark" slot="end">Preço: {{ tshirtInfo.price }}</ion-badge>
       </ion-item-divider>
+
+      <ion-item>
+        <ion-label>Selecione o tamanho</ion-label>
+        <ion-select multiple="false" cancelText="Cancelar" okText="Selecionar">
+          <ion-select-option value="xs" disabled="true">XS</ion-select-option>
+          <ion-select-option value="s" disabled="true">S</ion-select-option>
+          <ion-select-option value="m">M</ion-select-option>
+          <ion-select-option value="l" disabled="true">L</ion-select-option>
+          <ion-select-option value="xl" disabled="true">XL</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Selecione a loja</ion-label>
+        <ion-select multiple="false" cancelText="Cancelar" okText="Selecionar">
+          <ion-select-option value="braga" >Braga</ion-select-option>
+          <ion-select-option value="porto" disabled="true">Porto</ion-select-option>
+          <ion-select-option value="lisboa" disabled="true">Lisboa</ion-select-option>
+          <ion-select-option value="viana" disabled="true">Viana do Castelo</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      
+      <ion-button expand="block" shape="round" class="ion-padding ion-text-center" color="light" routerLink="../tabs/profile" routerDirection="forward">
+        Crie conta para finalizar
+      </ion-button>
+
+      <ion-button expand="block" fill="clear" shape="round" color="dark" routerLink="../tabs/cart" routerDirection="forward" (click)="presentToastAdd()">
+        Se já tem conta..
+      </ion-button>
+      
     </ion-card-content>
   </ion-card>
 
-  
-      <ion-button size="small" color="dark" class="btn1">
-        Verificar stock
-      </ion-button>
-  
-      <ion-button size="small" color="dark" class="btn">
-        Selecionar tamanho
-      </ion-button>
-    
 </ion-content>
-
-<!--TODO: Card modal to size chart and stock -->  

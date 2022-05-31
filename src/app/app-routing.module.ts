@@ -31,6 +31,14 @@ const routes: Routes = [
     loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
   },
 
+  {
+    path: 'reservationinfo',
+    loadChildren: () => import('./reservationinfo/reservationinfo.module').then( m => m.ReservationinfoPageModule)
+  },
+  {
+    path: 'favourits',
+    loadChildren: () => import('./favourits/favourits.module').then( m => m.FavouritsPageModule)
+  }
     //TODO: add routes to favorites, cart, profile/login
 ];
 @NgModule({

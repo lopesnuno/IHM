@@ -52,7 +52,7 @@
       </div>
 
       <ion-item lines="none">
-        <ion-input placeholder="Telemóvel" type="numeric" formControlName="cellphone" required></ion-input>
+        <ion-input placeholder="Telemóvel" type="text" formControlName="cellphone" required></ion-input>
       </ion-item>
       <div *ngIf="cellphone.dirty && cellphone.errors" class="errors">
         <span *ngIf="cellphone.errors?.required">Insira número de telemovel</span>
@@ -70,7 +70,7 @@
   </div>
 
   <div class="ion-padding ion-text-center">
-    <ion-button routerLink="../logged" routerDirection="forward" color="light" expand="block">
+    <ion-button routerLink="./sucess" routerDirection="forward" color="light" expand="block" [disabled]="!createForm.valid">
       Criar conta
     </ion-button>
   </div>

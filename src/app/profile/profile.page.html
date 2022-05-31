@@ -27,7 +27,6 @@
       </ion-item>
       <div *ngIf="password.dirty && password.errors" class="errors">
         <span *ngIf="password.errors?.required">Insira password</span>
-        <span *ngIf="password.errors?.minlength">Insira pelo menos 6 caracteres</span>
       </div>
       <h6 routerLink="../homepage" routerDirection="forward">Esquece-se da sua palavra-passe ?</h6>
 

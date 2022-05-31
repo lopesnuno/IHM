@@ -1,0 +1,29 @@
+.back-button {
+    color: #000;
+}
+
+.left {
+    padding: 5px;
+}
+
+.transparent {
+    --background: transparent;
+    --background-activated-opacity: 0;
+}
+
+.btn {
+    position: absolute;
+    right: 10px;
+    margin-right: 10px;
+}
+
+.btn1 {
+    position: absolute;
+    left: 10px;
+    margin-left: 10px;
+}
+
+.divide {
+    margin-bottom: 7px;
+}
+

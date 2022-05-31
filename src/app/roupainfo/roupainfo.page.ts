@@ -29,5 +29,15 @@ export class RoupainfoPage {
     toast.present();
   }
 
+  public async presentToastAdd() {
+    const toast = await this.toastController.create({
+      message: 'Artigo adicionado ao carrinho.',
+      duration: 2000,
+      color: 'dark',
+      position: 'bottom'
+    });
+    toast.present();
+  }
+
 }
 

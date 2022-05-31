@@ -25,11 +25,15 @@
       <ion-item>
         <ion-label>Selecione o tamanho</ion-label>
         <ion-select multiple="false" cancelText="Cancelar" okText="Selecionar">
-          <ion-select-option value="xs" disabled="true">XS</ion-select-option>
-          <ion-select-option value="s" disabled="true">S</ion-select-option>
-          <ion-select-option value="m">M</ion-select-option>
-          <ion-select-option value="l" disabled="true">L</ion-select-option>
-          <ion-select-option value="xl" disabled="true">XL</ion-select-option>
+          <ion-select-option value="0-3" disabled="true">0-3</ion-select-option>
+          <ion-select-option value="3-6" disabled="true">3-6</ion-select-option>
+          <ion-select-option value="6-12">6-12</ion-select-option>
+          <ion-select-option value="12-18" disabled="true">12-18</ion-select-option>
+          <ion-select-option value="18-24" disabled="true">18-24</ion-select-option>
+          <ion-select-option value="2" disabled="true">2</ion-select-option>
+          <ion-select-option value="3" disabled="true">3</ion-select-option>
+          <ion-select-option value="4" disabled="true">4</ion-select-option>
+          <ion-select-option value="5" disabled="true">5</ion-select-option>
         </ion-select>
       </ion-item>
 
@@ -48,7 +52,7 @@
         Crie conta para finalizar
       </ion-button>
 
-      <ion-button expand="block" fill="clear" shape="round" color="dark" routerLink="../tabs/cart" routerDirection="forward" (click)="presentToastAdd()">
+      <ion-button expand="block" fill="clear" shape="round" color="dark" (click)="presentToastAdd()">
         Se já tem conta..
       </ion-button>
       

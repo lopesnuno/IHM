@@ -20,7 +20,7 @@ export class ReservationsPage implements OnInit {
         "desc":"100% Algodão",
         "img":"tshirt-xpto.jpeg",
         "reservationId": "127386123",
-        "store":"Viana do Castelo"
+        "store":"Braga"
       },
       "tshirt-pxto": {
         "id": "2",

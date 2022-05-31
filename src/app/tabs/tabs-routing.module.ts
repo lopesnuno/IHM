@@ -24,6 +24,11 @@ const routes: Routes = [
         loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule)
       },
       {
+        path: 'cart',
+        loadChildren: () => import('../cart/cart.module').then(m => m.CartPageModule)
+      },
+      
+      {
         path: 'favourits',
         loadChildren: () => import('../favourits/favourits.module').then(m => m.FavouritsPageModule)
       },

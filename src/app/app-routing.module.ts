@@ -27,6 +27,11 @@ const routes: Routes = [
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   },
   {
+    path: 'cart',
+    loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
+  },
+
+  {
     path: 'reservationinfo',
     loadChildren: () => import('./reservationinfo/reservationinfo.module').then( m => m.ReservationinfoPageModule)
   },

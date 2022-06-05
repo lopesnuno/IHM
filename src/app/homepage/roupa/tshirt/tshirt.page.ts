@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { NavigationExtras, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { ActionSheetController, IonRouterOutlet, ModalController } from '@ionic/angular';
+import { TshirtService } from 'src/services/tshirt.service';
 
 @Component({
   selector: 'app-tshirt',
@@ -8,52 +8,11 @@ import { ActionSheetController, IonRouterOutlet, ModalController } from '@ionic/
   styleUrls: ['./tshirt.page.scss'],
 })
 
-export class TshirtPage {
+export class TshirtPage implements OnInit {
 
-  private dataTshirts: any;
+  private tshirt: any;
 
-  constructor(private router: Router, public routerOutlet: IonRouterOutlet, public actionSheetCtrl: ActionSheetController, public modalController: ModalController) {
-    this.dataTshirts = {
-      "tshirt-xpto": {
-        "id": "1",
-        "title": "T-shirt XPTO",
-        "price": "35$",
-        "desc":"100% Algodão",
-        "img":"tshirt-xpto.jpeg"
-      },
-      "tshirt-pxto": {
-        "id": "2",
-        "title": "T-shirt PXTO",
-        "price": "99$",
-        "desc":"50% polyester 50% Algodão",
-        "img":"tshirt-pxto.webp"
-      },
-      "123": {
-        "id": "3",
-        "title": "T-shirt Kenzo",
-        "price": "2500$",
-        "desc":"50% polyester 50% Algodão",
-        "img":"123.jpeg"
-      },
-      "1234": {
-        "id": "4",
-        "title": "T-shirt Dior",
-        "price": "1000$",
-        "desc":"50% polyester 50% Algodão",
-        "img":"4.jpeg"
-      },
-    }
-   }
-
-  public verDetalheTshirt (tshirtkey: string) {
-    let infoDaTshirt: NavigationExtras;
-    infoDaTshirt = {
-      state: {
-        dadosTshirt: this.dataTshirts[tshirtkey]
-      }
-    }
-    this.router.navigate(['roupainfo'], infoDaTshirt);
-  }
+  constructor(private tshirtServ: TshirtService, public actionSheetCtrl: ActionSheetController, public modalController: ModalController) { }
 
   async showModal() {
     const modal = await this.modalController.create({
@@ -62,5 +21,14 @@ export class TshirtPage {
     await modal.present();
   }
 
+  ngOnInit(){
+    this.tshirtServ.getInfoTshirts().subscribe(data => {
+      this.tshirt = data;
+    });
+  }
+
+  verTshirt(id: string){
+    this.tshirtServ.goToRota(id);
+  }
 }
 

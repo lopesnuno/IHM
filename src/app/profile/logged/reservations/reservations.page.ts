@@ -20,25 +20,8 @@ export class ReservationsPage implements OnInit {
         "desc":"100% Algodão",
         "img":"tshirt-xpto.jpeg",
         "reservationId": "127386123",
-        "store":"Braga"
-      },
-      "tshirt-pxto": {
-        "id": "2",
-        "title": "T-shirt PXTO",
-        "price": "99$",
-        "desc":"50% polyester 50% Algodão",
-        "img":"tshirt-pxto.webp",
-        "reservationId": "17236123",
-        "store":"Braga"
-      },
-      "123": {
-        "id": "3",
-        "title": "T-shirt Kenzo",
-        "price": "2500$",
-        "desc":"50% polyester 50% Algodão",
-        "img":"123.jpeg",
-        "reservationId": "8818236912",
-        "store":"Porto"
+        "store":"Braga",
+        "size":"6-12"
       },
       "1234": {
         "id": "4",
@@ -47,8 +30,9 @@ export class ReservationsPage implements OnInit {
         "desc":"50% polyester 50% Algodão",
         "img":"4.jpeg",
         "reservationId": "79837123",
-        "store":"Lisboa"
-      },
+        "store":"Lisboa",
+        "size":"6-12"
+      }
     }
    }
 

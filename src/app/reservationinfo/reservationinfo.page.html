@@ -20,9 +20,13 @@
         <ion-icon color="dark" name="cash-outline" slot="start"></ion-icon>
         <ion-badge color="dark" slot="end">Preço: {{ tshirtInfo.price }}</ion-badge>
       </ion-item-divider>
-      <ion-item-divider>
+      <ion-item-divider class="divide">
         <ion-icon color="dark" name="storefront-outline" slot="start"></ion-icon>
         <ion-badge color="dark" slot="end">Loja: {{ tshirtInfo.store }}</ion-badge>
+      </ion-item-divider>
+      <ion-item-divider>
+        <ion-icon color="dark" name="shirt-outline" slot="start"></ion-icon>
+        <ion-badge color="dark" slot="end">Tamanho: {{ tshirtInfo.size }}</ion-badge>
       </ion-item-divider>
     </ion-card-content>
   </ion-card>

@@ -39,7 +39,6 @@ const routes: Routes = [
     path: 'favourits',
     loadChildren: () => import('./favourits/favourits.module').then( m => m.FavouritsPageModule)
   }
-    //TODO: add routes to favorites, cart, profile/login
 ];
 @NgModule({
   imports: [

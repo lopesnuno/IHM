@@ -8,8 +8,8 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx'
 })
 export class HomepagePage implements OnInit {
 
-  constructor() { 
-    //this.orientation.lock(this.orientation.ORIENTATIONS.PORTRAIT);    //TODO: lock orientation
+  constructor(private orientation: ScreenOrientation) { 
+    this.orientation.lock(this.orientation.ORIENTATIONS.PORTRAIT);
   }
 
   ngOnInit() {

@@ -11,52 +11,14 @@
   </ion-toolbar>
 </ion-header>
 
-<!-- TODO: Add filter -->
-
 <ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col size-xs="6" size-md="6">
-        <ion-card (click)="verDetalheTshirt('tshirt-xpto')" style="height: 90%;">
-          <img src="./assets/img/tshirt-xpto.jpeg" />
+    <div *ngFor="let tshirt of tshirts | keyvalue">         <!--TODO: Make them side by side -->
+        <ion-card (click)="verTshirt(tshirt.key, 'roupainfo')">
+          <img src="./assets/img/{{ tshirt.value.img }}" />
           <ion-card-header>
-            <ion-card-title>T-shirt XPTO</ion-card-title>
-            <ion-card-subtitle>35$</ion-card-subtitle>
+            <ion-card-title>{{ tshirt.value.title }}</ion-card-title>
+            <ion-card-subtitle>{{ tshirt.value.price }}</ion-card-subtitle>
           </ion-card-header>
         </ion-card>
-      </ion-col> 
-
-      <ion-col size-xs="6" size-md="6">
-        <ion-card (click)="verDetalheTshirt('tshirt-pxto')" style="height: 90%;">
-          <img src="./assets/img/tshirt-pxto.webp" />
-          <ion-card-header>
-            <ion-card-title>T-shirt PXTO</ion-card-title>
-            <ion-card-subtitle>99$</ion-card-subtitle>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-
-      <ion-col size-xs="6" size-md="6">
-        <ion-card (click)="verDetalheTshirt('123')" style="height: 90%;">
-          <img src="./assets/img/123.jpeg" />
-          <ion-card-header>
-            <ion-card-title>T-shirt Kenzo</ion-card-title>
-            <ion-card-subtitle>2500$</ion-card-subtitle>
-          </ion-card-header>
-        </ion-card>
-      </ion-col> 
-
-      <ion-col size-xs="6" size-md="6">
-        <ion-card (click)="verDetalheTshirt('1234')" style="height: 90%;">
-          <img src="./assets/img/4.jpeg" />
-          <ion-card-header>
-            <ion-card-title>T-shirt Dior</ion-card-title>
-            <ion-card-subtitle>1000$</ion-card-subtitle>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-      
-    </ion-row>
-  </ion-grid> 
-
+    </div>
 </ion-content>

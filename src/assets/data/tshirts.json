@@ -1,5 +1,5 @@
 {
-   "tshirt-xpto": {
+   "1": {
     "id": "1",
     "title": "T-shirt XPTO",
     "price": "35$",
@@ -7,9 +7,10 @@
     "img":"tshirt-xpto.jpeg",
     "reservationId": "127386123",
     "store":"Braga",
-    "size":"6-12"
+    "size":"6-12",
+    "date":"21 mar 2022"
   },
-  "tshirt-pxto": {
+  "2": {
     "id": "2",
     "title": "T-shirt PXTO",
     "price": "99$",
@@ -17,9 +18,10 @@
     "img":"tshirt-pxto.webp",
     "reservationId": "79837123",
     "store":"Viana do Castelo",
-    "size":"18-24"
+    "size":"18-24",
+    "date":"22 mar 2022"
   },
-  "123": {
+  "3": {
     "id": "3",
     "title": "T-shirt Kenzo",
     "price": "2500$",
@@ -27,9 +29,10 @@
     "img":"123.jpeg",
     "reservationId": "8127637",
     "store":"Lisboa",
-    "size":"5"
+    "size":"5",
+    "date":"30 mar 2022"
   },
-  "1234": {
+  "4": {
     "id": "4",
     "title": "T-shirt Dior",
     "price": "1000$",
@@ -37,6 +40,7 @@
     "img":"4.jpeg",
     "reservationId": "79837123",
     "store":"Lisboa",
-    "size":"6-12"
+    "size":"6-12",
+    "date":"14 mai 2022"
   }
 }

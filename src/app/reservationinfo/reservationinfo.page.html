@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Reserva nº: {{tshirtInfo.reservationId}}</ion-title>
+    <ion-title>Reserva nº: {{tshirt.reservationId}}</ion-title>
     <ion-buttons slot="start">
       <ion-back-button text="" class="back-button"></ion-back-button>
     </ion-buttons>
@@ -9,24 +9,24 @@
 
 <ion-content>
 
-  <ion-card *ngIf="tshirtInfo">
-    <img src="./assets/img/{{ tshirtInfo.img }}" />
+  <ion-card *ngIf="tshirt">
+    <img src="./assets/img/{{ tshirt.img }}" />
     <ion-card-header>
-      <ion-card-subtitle>{{ tshirtInfo.desc }}</ion-card-subtitle>
-      <ion-card-title>{{ tshirtInfo.title }}</ion-card-title>
+      <ion-card-subtitle>{{ tshirt.desc }}</ion-card-subtitle>
+      <ion-card-title>{{ tshirt.title }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <ion-item-divider class="divide">
         <ion-icon color="dark" name="cash-outline" slot="start"></ion-icon>
-        <ion-badge color="dark" slot="end">Preço: {{ tshirtInfo.price }}</ion-badge>
+        <ion-badge color="dark" slot="end">Preço: {{ tshirt.price }}</ion-badge>
       </ion-item-divider>
       <ion-item-divider class="divide">
         <ion-icon color="dark" name="storefront-outline" slot="start"></ion-icon>
-        <ion-badge color="dark" slot="end">Loja: {{ tshirtInfo.store }}</ion-badge>
+        <ion-badge color="dark" slot="end">Loja: {{ tshirt.store }}</ion-badge>
       </ion-item-divider>
       <ion-item-divider>
         <ion-icon color="dark" name="shirt-outline" slot="start"></ion-icon>
-        <ion-badge color="dark" slot="end">Tamanho: {{ tshirtInfo.size }}</ion-badge>
+        <ion-badge color="dark" slot="end">Tamanho: {{ tshirt.size }}</ion-badge>
       </ion-item-divider>
     </ion-card-content>
   </ion-card>

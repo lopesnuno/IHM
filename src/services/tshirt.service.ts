@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class TshirtService {
 
-  private tshirt: any;
+  private tshirts: any;
 
   constructor(private router: Router, private rotaAtiva: ActivatedRoute) { }
 
@@ -16,14 +16,14 @@ export class TshirtService {
       fetch('./assets/data/tshirts.json')
         .then(resposta => resposta.json())
         .then(json => {
-          this.tshirt = json;
+          this.tshirts = json;
           observer.next(json);
           observer.complete();
         });
     });
   }
 
-  getInfoTshirts() {
+  getInfoTshirt() {
     return new Observable (observer => {
       this.rotaAtiva.queryParams.subscribe(params => {
         if (this.router.getCurrentNavigation().extras.state) {
@@ -34,12 +34,12 @@ export class TshirtService {
     });
   }
 
-  goToRota(id: string) {
+  goToRota(id: string, rota: string) {
     const extras: NavigationExtras = {
       state: {
-        tshirt: this.tshirt[id]
+        tshirt: this.tshirts[id]
       }
     };
-    this.router.navigate(['reservationinfo'], extras);
+    this.router.navigate([rota], extras);
   }
 }

@@ -33,7 +33,7 @@ export class RoupainfoPage implements OnInit {
   }
 
   ngOnInit(){
-    this.tshirtServ.getInfoTshirts().subscribe(infoTshirt => {
+    this.tshirtServ.getInfoTshirt().subscribe(infoTshirt => {
       this.tshirt = infoTshirt;
     });
   }

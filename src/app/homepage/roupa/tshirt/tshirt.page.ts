@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActionSheetController, IonRouterOutlet, ModalController } from '@ionic/angular';
+
 import { TshirtService } from 'src/services/tshirt.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { TshirtService } from 'src/services/tshirt.service';
 
 export class TshirtPage implements OnInit {
 
-  private tshirt: any;
+  private tshirts: any;
 
   constructor(private tshirtServ: TshirtService, public actionSheetCtrl: ActionSheetController, public modalController: ModalController) { }
 
@@ -22,13 +23,13 @@ export class TshirtPage implements OnInit {
   }
 
   ngOnInit(){
-    this.tshirtServ.getInfoTshirts().subscribe(data => {
-      this.tshirt = data;
+    this.tshirtServ.getTshirts().subscribe(data => {
+      this.tshirts = data;
     });
   }
 
-  verTshirt(id: string){
-    this.tshirtServ.goToRota(id);
+  verTshirt(id: string, rota: string){
+    this.tshirtServ.goToRota(id, rota);
   }
 }
 

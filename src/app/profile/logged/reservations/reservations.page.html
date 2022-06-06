@@ -9,16 +9,12 @@
 
 <ion-content>
   
-  <ion-list>
-      <ion-item>
-        <ion-icon slot="end" name="chevron-forward-outline" (click)="verDetalheTshirt('tshirt-xpto')"></ion-icon>
-        <ion-label>21 mar 2022<p>99$</p></ion-label>
-      </ion-item>
-
-      <ion-item>
-        <ion-icon slot="end" name="chevron-forward-outline" (click)="verDetalheTshirt('1234')"></ion-icon>
-        <ion-label>09 mai 2022<p>1000$</p></ion-label>
-      </ion-item>
-  </ion-list>
-
+  <div *ngFor="let tshirt of tshirts | keyvalue">
+    <ion-list>
+        <ion-item>
+          <ion-icon slot="end" name="chevron-forward-outline" (click)="verTshirt(tshirt.key, 'reservationinfo')"></ion-icon>
+          <ion-label>{{ tshirt.value.date }}<p>{{ tshirt.value.price }}</p></ion-label>
+        </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
